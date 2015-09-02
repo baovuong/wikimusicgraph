@@ -1,6 +1,7 @@
 import httplib
 import json
 import sqlite3
+import urllib
 import wikipedia
 
 class MusicGenre:
@@ -14,8 +15,16 @@ class MusicGenre:
         self.stylistic_origins = []
 
 def get_wiki_content(page_title):
-    h1 = httplib.HTTPConnection('https://en.wikipedia.org/w/api.php?') 
+	arguments = {}
+	arguments['action'] = 'query'
+	arguments['titles'] = page_title
+	arguments['prop'] = 'revisions'
+	arguments['rvprop'] = 'content'
+	arguments['format'] = 'json'
+	
+	url = 'https://en.wikipedia.org/w/api.php?%s' % (urllib.urlencode(arguments))
+	
+	return json.loads(urllib.urlopen(url).read())
 
-anti_folk = wikipedia.page('Anti-folk')
-print anti_folk.html()
-print anti_folk.sections
+content = get_wiki_content('House_music')
+print content['query']['pages'][content['query']['pages'].keys()[0]]['revisions'][0]['*']
