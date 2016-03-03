@@ -31,68 +31,35 @@ def get_wiki_content(page_title):
 def extract_genre_info_box(text):
     output = ''
     # probably going to use a PDA type of thing
-    enclosing_brackets = [] # the stack 
-    state = 0
-    for c in text:
-        if state == 0:
-            continue
-        if state == 1:
-            continue
-        if state == 2:
-            continue
-        if state == 3:
-            continue
-        if state == 4:
-            continue
-        if state == 5:
-            continue
-        if state == 6:
-            continue
-        if state == 7:
-            continue        
-        if state == 8:
-            continue
-        if state == 9:
-            continue
-        if state == 10:
-            continue
-        if state == 11:
-            continue
-        if state == 12:
-            continue
-        if state == 13:
-            continue
-        if state == 14:
-            continue
-        if state == 15:
-            continue
-        if state == 16:
-            continue
-        if state == 17:
-            continue 
-        if state == 18:
-            continue
-        if state == 19:
-            continue
-        if state == 20:
-            continue
-        if state == 21:
-            continue
-        if state == 22:
-            continue
-        if state == 23:
-            continue
-        if state == 24:
-            continue
-        pass 
-    
-    
-    return output;
-    
+
+    # there should be 25 states. 0 - 24
+    # each output of the state transition will be a 3 value tuple: (next state,what's on top of the stack,what to replace top of stack with)
+    current_state = 0
+    state_transitions = {
+        '{':       [ (1,'',''),(2,'',''),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),() ],
+        '}':       [ (),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),() ],
+        'I':       [ (),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),() ],
+        'n':       [ (),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),() ],
+        'f':       [ (),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),() ],
+        'o':       [ (),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),() ],
+        'b':       [ (),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),() ],
+        'x':       [ (),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),() ],
+        'm':       [ (),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),() ],
+        'u':       [ (),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),() ],
+        's':       [ (),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),() ],
+        'i':       [ (),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),() ],
+        'c':       [ (),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),() ],
+        'g':       [ (),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),() ],
+        'e':       [ (),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),() ],
+        'r':       [ (),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),() ],
+        'default': [ (),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),() ],
+    }
+    state_stack = ['Z']
 
 
 
 sys.stdout = codecs.getwriter(locale.getpreferredencoding())(sys.stdout)
 
 content = get_wiki_content('House_music')
-print content['query']['pages'][content['query']['pages'].keys()[0]]['revisions'][0]['*']
+text = content['query']['pages'][content['query']['pages'].keys()[0]]['revisions'][0]['*']
+print text
