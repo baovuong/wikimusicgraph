@@ -58,21 +58,10 @@ def extract_genre_info_box(text):
     state_stack = ['Z']
     
     for character in text:
-        
-        if character in state_transitions:
-            c = character
-        else:
-            c = 'default'
-        
-        step = state_transitions[c][current_state]
-        
-        #step = state_transitions[character][current_state] if character in state_transitions else state_transitions['default'][current_state]
-        #print step
-        #print current_state
+
+        step = state_transitions[character][current_state] if character in state_transitions else state_transitions['default'][current_state]
         if len(step) != 3:
             # dead. try again
-            if c == 'default' and current_state == 21:
-                print 'fuck'
             current_state = 0
             state_stack = ['Z']
             output = ''
@@ -98,16 +87,14 @@ def extract_genre_info_box(text):
         if state_stack[-1] == 'Z' and current_state == 21:
             #print 'done'
             break
-         
-        
-    
+
     return output
 
-
+def infobox_to_music_genre(infobox_text):
+    pass 
 
 sys.stdout = codecs.getwriter(locale.getpreferredencoding())(sys.stdout)
 
-#content = get_wiki_content('House_music')
-content = get_wiki_content('uk_garage_music')
+content = get_wiki_content('House_music')
 text = content['query']['pages'][content['query']['pages'].keys()[0]]['revisions'][0]['*']
 print extract_genre_info_box(text)
