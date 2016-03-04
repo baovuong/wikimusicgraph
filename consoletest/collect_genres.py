@@ -25,7 +25,7 @@ def get_wiki_content(page_title):
     arguments['rvprop'] = 'content'
     arguments['format'] = 'json'
     url = 'https://en.wikipedia.org/w/api.php?%s' % (urllib.urlencode(arguments))
-    
+
     return json.loads(urllib.urlopen(url).read())
 
 def extract_genre_info_box(text):
@@ -36,7 +36,7 @@ def extract_genre_info_box(text):
     # each output of the state transition will be a 3 value tuple: (next state,what's on top of the stack,what to replace top of stack with)
     current_state = 0
     state_transitions = {
-        '{':       [ (1,'Z',''),(2,'Z',''),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),() ],
+        '{':       [ (1,'Z',''),(2,'Z',''),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(22,'a',''),(21,'a','a'),(),() ],
         '}':       [ (),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),() ],
         'I':       [ (),(),(3,'Z',''),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(),() ],
         'n':       [ (),(),(),(4,'Z',''),(),(),(),(),(),(),(),(),(),(),(),(),(),(),(19,'Z',''),(),(),(),(),(),() ],
