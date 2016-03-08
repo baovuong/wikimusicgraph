@@ -91,10 +91,11 @@ def extract_genre_info_box(text):
     return output
 
 def infobox_to_music_genre(infobox_text):
+    # I will probably do the same thing. just FSM my way to this. technically the most efficient route
     pass 
 
 sys.stdout = codecs.getwriter(locale.getpreferredencoding())(sys.stdout)
 
-content = get_wiki_content('House_music')
+content = get_wiki_content('Downtempo')
 text = content['query']['pages'][content['query']['pages'].keys()[0]]['revisions'][0]['*']
 print extract_genre_info_box(text)

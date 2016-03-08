@@ -1,0 +1,11 @@
+{{Infobox music genre
+|name= Downtempo
+|bgcolor= Silver
+|color= Black
+|stylistic_origins= {{hlist|[[Electronic music]]|[[ambient music|ambient]]|[[chill-out music|chillout]]|[[groove (music)|groove music]]|[[jazz]]|[[funk]]|[[dub music|dub]]|[[hip hop music|hip hop]]|[[house music|house]]|[[hi-NRG]]}}
+|fusiongenres = 
+|cultural_origins= Early 1990s, [[United Kingdom]]
+|instruments= {{hlist|[[Synthesizers]]|[[personal computer]]|[[Sampler (musical instrument)|sampler]] occasional use of instruments include [[guitar]]|[[Bass guitar|bass]]|[[Drum kit|drums]]|[[Keyboard instrument|keyboard]]|[[Organ (music)|organ]]|[[percussion]]|[[Brass instrument|brass]]|[[String instrument|strings]]|[[Rhodes piano|rhodes]]|[[flute]]|[[saxophone]]}}
+|popularity= Medium, mainly based in the United Kingdom but growing in United States, Japan, New Zealand and Latin America.
+|derivatives = [[Trip hop]]
+}}

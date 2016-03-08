@@ -1,0 +1,83 @@
+{{Infobox music genre
+| Name = Jazz
+| color = black
+| bgcolor = #FFC0CB
+|  image      = [[File:Louis Armstrong restored.jpg|200px]]
+|caption      = [[Louis Armstrong]] (1901–1971) is considered one of the pivotal musicians in jazz for his contributions as a trumpet player, composer and singer.
+| stylistic_origins = {{hlist|[[Blues]]|[[Folk music|folk]]|[[American march music|marches]]|[[ragtime]]|[[classical music]]}}
+| cultural_origins = Late 19th-century United States
+| instruments = {{hlist|[[Double bass]]|[[Drum kit|drums]]|[[guitar]] (typically [[electric guitar]])|[[piano]]|[[saxophone]]|[[trumpet]]|[[clarinet]]|[[trombone]]|[[Singing|vocals]]|[[vibraphone]]|[[Hammond organ]]|[[harmonica]]}}. In [[jazz fusion]] of the 1970s, [[electric bass]], [[electric piano]] and [[synthesizer]] were common.
+| derivatives = {{hlist|[[Funk]]|[[jump blues]]|[[reggae]]|[[rhythm and blues]]|[[ska]]|[[Hip Hop music|hip hop]]}}
+| subgenrelist =
+| subgenres =
+* [[Avant-garde jazz]]
+* [[Bebop]]
+* [[Big band]]
+* [[Chamber jazz]]
+* [[Cool jazz]]
+* [[ECM Jazz]]
+* [[Free jazz]]
+* [[Gypsy jazz]]
+* [[Hard bop]]
+* [[Latin jazz]]
+* [[Mainstream jazz]]
+* [[Modal jazz]]
+* [[M-Base]]
+* [[Neo-bop jazz|Neo-bop]]
+* [[Post-bop]]
+* [[Soul jazz]]
+* [[Swing music|Swing]]
+* [[Third stream]]
+* [[Trad jazz|Traditional jazz]]
+| fusiongenres =
+* [[Acid jazz]]
+* [[Afrobeat]]
+* [[Bluegrass music|Bluegrass]]
+* [[Crossover jazz]]
+* [[Dansband]]
+* [[Folk jazz]]
+* [[Free funk]]
+* [[Humppa]]
+* [[Indo jazz]]
+* [[Jam band]]
+* [[Jazzcore]]
+* [[Jazz-funk|Jazz funk]]
+* [[Jazz fusion]]
+* [[Jazz rap]]
+* [[Kwela]]
+* [[Mambo (music)|Mambo]]
+* [[Manila Sound]]
+* [[Nu jazz]]
+* [[Neo soul|Nu soul]]
+* [[Punk jazz]]
+* [[Shibuya-kei]]
+* [[Ska jazz]]
+* [[Smooth jazz]]
+* [[Swing revival]]
+* [[World fusion music|World fusion]]
+| regional_scenes =
+* [[Australian jazz|Australia]]
+* [[Azerbaijani jazz|Azerbaijan]]
+* [[Bossa nova|Brazil]]
+* [[Canadian jazz|Canada]]
+* [[Cuban jazz|Cuba]]
+* [[French jazz|France]]
+* [[Jazz in Germany|Germany]]
+* [[Mini-jazz|Haiti]]
+* [[Jazz in India|India]]
+* [[Italian jazz|Italy]]
+* [[Japanese jazz|Japan]]
+* [[Music of Malawi|Malawi]]
+* [[Dutch jazz|Netherlands]]
+* [[Polish jazz|Poland]]
+* [[South African jazz|South Africa]]
+* [[Spanish jazz|Spain]]
+* [[British jazz|United Kingdom
+
+]]
+| other_topics =
+* [[List of jazz clubs|Jazz clubs]]
+* [[Jazz standard]]
+* [[Jazz (word)]]
+| current_year = no
+}}
