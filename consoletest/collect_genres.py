@@ -99,6 +99,7 @@ def infobox_to_music_genre(infobox_text):
         'derivative_forms': [],
         'fusion_genres': []
     }
+    entry = ''
     assignment_index = ''
     state = 0
     transitions = [
@@ -310,6 +311,7 @@ def infobox_to_music_genre(infobox_text):
         if state == 26:
             if character == '[':
                 # start the extraction
+                entry = ''
                 state = 27
             else:
                 state = 25
@@ -322,15 +324,19 @@ def infobox_to_music_genre(infobox_text):
                 state = 28
             else:
                 # extract pls
+                entry += character
                 state = 27
             continue
             
         if state == 28:
             if character == ']':
                 # close it up and save it
+                assignment[assignment_index].append(entry)
+                entry = ''
                 state = 24
             else:
                 # extract character
+                entry += character
                 state = 27
             continue
             
