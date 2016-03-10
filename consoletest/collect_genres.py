@@ -99,6 +99,7 @@ def infobox_to_music_genre(infobox_text):
         'derivative_forms': [],
         'fusion_genres': []
     }
+    assignment_index = ''
     state = 0
     transitions = [
     ]
@@ -108,7 +109,8 @@ def infobox_to_music_genre(infobox_text):
             if character == '|':
                 state = 1
             continue
-        if (state == 1):
+            
+        if state == 1:
             if character == 'f':
                 state = 40
             elif character == 'd':
@@ -120,60 +122,218 @@ def infobox_to_music_genre(infobox_text):
             else:
                 state = 0
             continue
-        if (state == 2):
+            
+        if state == 2:
+            if character == 'a':
+                state = 3
+            else:
+                state = 0
             continue
-        if (state == 3):
+            
+        if state == 3:
+            if character == 'm':
+                state = 4
+            else:
+                state = 0
             continue
-        if (state == 4):
+            
+        if state == 4:
+            if character == 'e':
+                state = 5
+            else:
+                state = 0
             continue
-        if (state == 5):
+            
+        if state == 5:
+            if character == '=':
+                state = 6
+            elif character == ' ':
+                state = 5
+            else:
+                state = 0
             continue
-        if (state == 6):
+            
+        if state == 6:
+            if character == '|':
+                state = 1
+            else:
+                # extract stuff
+                genre_name += character
             continue
-        if (state == 7):
+            
+        if state == 7:
+            if character == 't':
+                state = 8
+            elif character == 'u':
+                state = 52
+            else:
+                state = 0
             continue
-        if (state == 8):
+            
+        if state == 8:
+            if character == 'y':
+                state = 9
+            else:
+                state = 0
             continue
-        if (state == 9):
+            
+        if state == 9:
+            if character == 'l':
+                state = 10
+            else:
+                state = 0
             continue
-        if (state == 10):
+            
+        if state == 10:
+            if character == 'i':
+                state = 11
+            else:
+                state = 0
             continue
-        if (state == 11):
+            
+        if state == 11:
+            if character == 's':
+                state = 12
+            else:
+                state = 0
             continue
-        if (state == 12):
+            
+        if state == 12:
+            if character == 't':
+                state = 13
+            else:
+                state = 0
             continue
-        if (state == 13):
+            
+        if state == 13:
+            if character == 'i':
+                state = 14
+            else:
+                state = 0
             continue
-        if (state == 14):
+        
+        if state == 14:
+            if character == 'c':
+                state = 15
+            else:
+                state = 0
             continue
-        if (state == 15):
+        
+        if state == 15:
+            if character == '_':
+                state == 16
+            else:
+                state = 0
             continue
-        if (state == 16):
+            
+        if state == 16:
+            if character == 'o':
+                state = 17
+            else:
+                state = 0
             continue
-        if (state == 17):
+            
+        if state == 17:
+            if character == 'r':
+                state = 18
+            else:
+                state = 0
             continue
-        if (state == 18):
+            
+        if state == 18:
+            if character == 'i':
+                state = 19
+            else:
+                state = 0
             continue
-        if (state == 19):
+            
+        if state == 19:
+            if character == 'g':
+                state = 20
+            else:
+                state = 0
             continue
-        if (state == 20):
+            
+        if state == 20:
+            if character == 'i':
+                state = 21
+            else:
+                state = 0
             continue
-        if (state == 21):
+            
+        if state == 21:
+            if character == 'n':
+                state = 22
+            else:
+                state = 0
             continue
-        if (state == 22):
+            
+        if state == 22:
+            if character == 's':
+                state = 23
+            else:
+                state = 0
             continue
-        if (state == 23):
+            
+        if state == 23:
+            if character == '=':
+                # do the thing
+                assignment_index = 'stylistic_origins'
+                state = 24
+            elif character == ' ':
+                state = 23
+            else:
+                state = 0
             continue
-        if (state == 24):
+            
+        if state == 24:
+            if character == '{':
+                state = 25
+            elif character == '[':
+                state = 26
+            elif character == '|':
+                state = 1
+                # reset, start anew
+            else:
+                state = 24
             continue
-        if (state == 25):
+            
+        if state == 25:
+            if character == '[':
+                state = 26
+            elif character == '}':
+                state = 24
+            else:
+                state = 25
             continue
-        if (state == 26):
+            
+        if state == 26:
+            if character == '[':
+                # start the extraction
+                state = 27
+            else:
+                state = 25
             continue
-        if (state == 27):
+            
+        if state == 27:
+            # woo extraction 
+            if character == ']':
+                # don't extract this part
+                state = 28
+            else:
+                # extract pls
+                state = 27
             continue
-        if (state == 28):
+            
+        if state == 28:
+            if character == ']':
+                # close it up and save it
+                state = 24
+            else:
+                # extract character
+                state = 27
             continue
+            
         if (state == 29):
             continue
         if (state == 30):
